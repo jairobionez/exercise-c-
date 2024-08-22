@@ -86,10 +86,8 @@ namespace Exercism.Console.CryptoSquare
                 return string.Empty;
 
             var normalizedText = NormalizedPlaintext(plaintext);
-            var plaintextSegments = PlaintextSegments(normalizedText);
 
-
-            return plaintextSegments;
+            return PlaintextSegments(normalizedText);
         }
 
         public static string Ciphertext(string plaintext)
@@ -97,8 +95,7 @@ namespace Exercism.Console.CryptoSquare
             if (string.IsNullOrEmpty(plaintext))
                 return string.Empty;
 
-            var encodedMessage = Encoded(plaintext);
-            return encodedMessage;
+            return Encoded(plaintext);
         }
     }
 }
