@@ -89,13 +89,5 @@ namespace Exercism.Console.CryptoSquare
 
             return PlaintextSegments(normalizedText);
         }
-
-        public static string Ciphertext(string plaintext)
-        {
-            if (string.IsNullOrEmpty(plaintext))
-                return string.Empty;
-
-            return Encoded(plaintext);
-        }
     }
 }
