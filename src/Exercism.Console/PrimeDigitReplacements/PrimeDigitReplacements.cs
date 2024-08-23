@@ -14,7 +14,7 @@ namespace Exercism.Console
         {
             var primeNumbers = new HashSet<long>();
 
-            var combinations = Combinations(Enumerable.Range(1, (int)N - 1), (int)K);
+            var combinations = Combinations(Enumerable.Range(1, (int)N - 2), (int)K);
 
 
             if (ApplyConstraints(N, K, L))
