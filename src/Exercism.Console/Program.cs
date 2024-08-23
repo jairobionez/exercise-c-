@@ -18,9 +18,9 @@ namespace Exercism
             //var elapsedTime = Lasagna.ElapsedTimeInMinutes(8, 10);
 
             //https://www.hackerrank.com/contests/projecteuler/challenges/euler051/problem?isFullScreen=true
-            //var primeDigits = PrimeDigitReplacements.InputNumbers(2, 1, 3);
-            var primeDigits2 = PrimeDigitReplacements.InputNumbers(5, 2, 7);
-            var primeDigits3 = PrimeDigitReplacements.InputNumbers(7, 2, 7);
+            var primeDigits = PrimeDigitReplacements.InputNumbers(2, 1, 3);
+            //var primeDigits2 = PrimeDigitReplacements.InputNumbers(5, 2, 7);
+            //var primeDi}gits3 = PrimeDigitReplacements.InputNumbers(7, 2, 7);
         }
     }
 }
