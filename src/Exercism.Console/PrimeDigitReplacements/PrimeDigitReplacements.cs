@@ -12,8 +12,7 @@ namespace Exercism.Console
 
         public static List<long> InputNumbers(long N, long K, long L)
         {
-            var primeNumbers = new List<long>();
-            //var a = IsPrimeNumber(N);
+            var primeNumbers = new HashSet<long>();
 
             var combinations = Combinations(Enumerable.Range(1, (int)N - 1), (int)K);
 
@@ -32,19 +31,19 @@ namespace Exercism.Console
                 var firstFamilyNumber = 0l;
                 var stopLooping = false;
 
-                while (initialNumber.ToString().Count() == N)
+                while (GetLengthUsingLog(initialNumber) == N)
                 {
                     if (IsPrimeNumber(initialNumber))
                     {
                         firstFamilyNumber = initialNumber;
-                        
+
                         foreach (var combination in combinations)
                         {
                             primeNumbers.Add(initialNumber);
                             initialNumber = firstFamilyNumber;
                             for (var replacementNumber = 1; replacementNumber <= 9; replacementNumber++)
                             {
-                                var newNumber = ReplaceFamily(combination.ToList(), initialNumber, replacementNumber);
+                                var newNumber = ReplaceFamily(combination.ToList(), initialNumber.ToString(), replacementNumber);
                                 if (IsPrimeNumber(newNumber) && !primeNumbers.Any(prime => prime == newNumber))
                                     primeNumbers.Add(newNumber);
 
@@ -53,7 +52,7 @@ namespace Exercism.Console
                             };
                             if (stopLooping) break;
                             else
-                                primeNumbers = new List<long>();
+                                primeNumbers = new HashSet<long>();
                         };
                     }
                     if (stopLooping) break;
@@ -64,46 +63,44 @@ namespace Exercism.Console
             return primeNumbers.OrderBy(x => x).ToList();
         }
 
-        private static long ReplaceFamily(List<int> positions, long number, long replacementNumber)
+        private static int GetLengthUsingLog(long number)
         {
-            var numberStr = number.ToString();
-            for (var i = 0; i < positions.Count; i++)
-                numberStr = numberStr.ToString().Remove(positions[i], 1).Insert(positions[i], replacementNumber.ToString());
-            return ToLong(numberStr);
+            number = Math.Abs(number);
+            if (number == 0)
+                return 1;
+
+            return (int)Math.Floor(Math.Log10(number)) + 1;
+        }
+
+        private static long ReplaceFamily(List<int> positions, string number, long replacementNumber)
+        {
+            var charArray = number.ToCharArray();
+            foreach (var position in positions)
+            {
+                charArray[position] = replacementNumber.ToString()[0];
+            }
+            return ToLong(new string(charArray));
         }
 
         private static bool IsPrimeNumber(long number)
         {
-            int count = 0;
+            if (number <= 1) return false;
+            if (number <= 3) return true;
+            if (number % 2 == 0 || number % 3 == 0) return false;
 
-            for (var i = 1; i <= number; i++)
+            for (long i = 5; i * i <= number; i += 6)
             {
-                if (number <= 1)
-                    count = 3;
-
-                if (number % i == 0)
-                    count++;
-
-                if (count == 3)
-                    break;
+                if (number % i == 0 || number % (i + 2) == 0) return false;
             }
-
-            return count == 2;
+            return true;
         }
 
         private static string GenerateInitialNumber(long N)
         {
-            var initialNumberStr = "";
-
-            for (var i = 1; i <= N; i++)
-            {
-                if (i == 1)
-                    initialNumberStr += "1";
-                else
-                    initialNumberStr += "0";
-            }
-
-            return initialNumberStr;
+            var builder = new StringBuilder();
+            builder.Append('1');
+            builder.Append('0', (int)N - 1);
+            return builder.ToString();
         }
 
         private static bool ApplyConstraints(long N, long K, long L)
