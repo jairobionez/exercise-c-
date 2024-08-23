@@ -20,38 +20,14 @@ namespace Exercism.Console
 
         //InputNumbers(N, K, L);
 
-        public static int CompararListas(List<int> x, List<int> y)
-        {
-            int count = Math.Min(x.Count, y.Count);
-            for (int i = 0; i < count; i++)
-            {
-                int comparison = x[i].CompareTo(y[i]);
-                if (comparison != 0)
-                {
-                    return comparison;
-                }
-            }
-            return x.Count.CompareTo(y.Count);
-        }
-
-        public static List<long> InputNumbers(long N, long K, long L)
+        public static string InputNumbers(long N, long K, long L)
         {
             var primeNumbers = new HashSet<long>();
+            var primeNumbers2 = new HashSet<string>();
 
             var combinations = Combinations(Enumerable.Range(0, (int)N), (int)K)
                                     .Select(combinations => combinations.ToList())
                                     .ToList();
-
-            combinations.Sort((a, b) =>
-            {
-                int compareFirst = b[0].CompareTo(a[0]);
-                if (compareFirst == 0)
-                {
-                    return b[1].CompareTo(a[1]);
-                }
-                return compareFirst;
-            });
-
 
             if (ApplyConstraints(N, K, L))
             {
@@ -86,26 +62,35 @@ namespace Exercism.Console
                                 if (IsPrimeNumber(newNumber) && !primeNumbers.Any(prime => prime == newNumber))
                                     primeNumbers.Add(newNumber);
 
-                                stopLooping = primeNumbers.Count == L;
-                                if (stopLooping)
+                                if (primeNumbers.Count == L)
+                                {
+                                    primeNumbers2.Add(string.Join(' ', primeNumbers));
                                     break;
+                                }
                             };
-                            if (stopLooping) break;
-                            else
-                                primeNumbers = new HashSet<long>();
+                             primeNumbers = new HashSet<long>();
                         };
+
+                        if(primeNumbers2.Count() == L) {
+                            stopLooping = true;
+                            break;
+                        }
                     }
                     if (stopLooping) break;
                     initialNumber++;
                 }
             }
-
-            return primeNumbers.OrderBy(x => x).ToList();
+            else {
+                return string.Empty;
+            }
+            
+            var minorList = primeNumbers2.OrderBy(p => p).FirstOrDefault();
+            return minorList;
         }
 
         private static bool RepeatSamePosition(long number, List<int> positions)
         {
-            if(GetLengthUsingLog(number) <= 2)
+            if (GetLengthUsingLog(number) <= 2)
                 return true;
 
             var allEqual = false;
