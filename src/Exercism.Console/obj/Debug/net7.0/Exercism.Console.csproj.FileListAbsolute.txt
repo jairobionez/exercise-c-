@@ -28,3 +28,18 @@ F:/Projetos/exercise/src/Exercism.Console/obj/Debug/net7.0/ref/Exercism.Console.
 /Users/jairobionez/Documents/Projetos pessoais/exercism-solutions/src/Exercism.Console/obj/Debug/net7.0/Exercism.Console.pdb
 /Users/jairobionez/Documents/Projetos pessoais/exercism-solutions/src/Exercism.Console/obj/Debug/net7.0/Exercism.Console.genruntimeconfig.cache
 /Users/jairobionez/Documents/Projetos pessoais/exercism-solutions/src/Exercism.Console/obj/Debug/net7.0/ref/Exercism.Console.dll
+F:\Projetos\exercise\src\Exercism.Console\bin\Debug\net7.0\Exercism.Console.exe
+F:\Projetos\exercise\src\Exercism.Console\bin\Debug\net7.0\Exercism.Console.deps.json
+F:\Projetos\exercise\src\Exercism.Console\bin\Debug\net7.0\Exercism.Console.runtimeconfig.json
+F:\Projetos\exercise\src\Exercism.Console\bin\Debug\net7.0\Exercism.Console.dll
+F:\Projetos\exercise\src\Exercism.Console\bin\Debug\net7.0\Exercism.Console.pdb
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.csproj.AssemblyReference.cache
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.AssemblyInfoInputs.cache
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.AssemblyInfo.cs
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.csproj.CoreCompileInputs.cache
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.dll
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\refint\Exercism.Console.dll
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.pdb
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\Exercism.Console.genruntimeconfig.cache
+F:\Projetos\exercise\src\Exercism.Console\obj\Debug\net7.0\ref\Exercism.Console.dll

@@ -1,5 +1,6 @@
 ﻿using Exercism.Console;
 using Exercism.Console.CryptoSquare;
+using Exercism.Console.Euler;
 using Exercism.Console.Lasagna;
 
 namespace Exercism
@@ -18,11 +19,14 @@ namespace Exercism
             //var elapsedTime = Lasagna.ElapsedTimeInMinutes(8, 10);
 
             //https://www.hackerrank.com/contests/projecteuler/challenges/euler051/problem?isFullScreen=true
-            //var primeDigits = PrimeDigitReplacements.InputNumbers(2, 1, 3);
-            //var primeDigits2 = PrimeDigitReplacements.InputNumbers(5, 2, 7);
-            //var primeDigits3 = PrimeDigitReplacements.InputNumbers(7, 3, 7);
-            //var primeDigits3 = PrimeDigitReplacements.InputNumbers(4, 3, 4);
-            var primeDigits3 = PrimeDigitReplacements.InputNumbers(6, 2, 5);
+            //var primeDigits = Euler51.InputNumbers(2, 1, 3);
+            //var primeDigits2 = Euler51.InputNumbers(5, 2, 7);
+            //var primeDigits3 = Euler51.InputNumbers(7, 3, 7);
+            //var primeDigits3 = Euler51.InputNumbers(4, 3, 4);
+            var primeDigits3 = Euler51.InputNumbers(6, 2, 5);
+
+            //https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem?isFullScreen=true
+            //var sumMultiples = Euler1.Multiples(10);
         }
     }
 }

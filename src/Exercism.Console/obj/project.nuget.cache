@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GccuNOMg/ltAWv6AlDZ+eOGFldtmqYJZSSSfhYJEFswPrFkPIoNKlk4giTyTQEhHN6p+mv1avl2CPzHOf4vjsA==",
+  "dgSpecHash": "+dWJN6jmA28xedMw7Lfzg5SZtJGN6KPRClwAbHUr/NKjz2iZhNw5tqkiF7Pbpg/XQgRvHZGfVvmvzYsTfDsqMA==",
   "success": true,
-  "projectFilePath": "/Users/jairobionez/Documents/Projetos pessoais/exercism-solutions/src/Exercism.Console/Exercism.Console.csproj",
+  "projectFilePath": "F:\\Projetos\\exercise\\src\\Exercism.Console\\Exercism.Console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

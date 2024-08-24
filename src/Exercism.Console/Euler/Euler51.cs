@@ -10,7 +10,7 @@ using Microsoft.VisualBasic;
 namespace Exercism.Console
 {
 
-    public static class PrimeDigitReplacements
+    public static class Euler51
     {
         // long N, K, L = 0;
 
