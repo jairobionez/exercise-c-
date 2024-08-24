@@ -15,21 +15,6 @@ namespace Exercism.Console.Euler
             var fibonacciNumbers = new List<long>();
             long fibonacciControl = 0;
 
-            //for (var i = 1; fibonacciControl <= T; i++)
-            //{
-            //    if (i == 1 || i == 2)
-            //    {
-            //        fibonacciNumbers.Add(i);
-            //        fibonacciControl = i;
-            //    }
-            //    else
-            //    {
-            //        fibonacciControl = fibonacciNumbers.TakeLast(2).Sum();
-            //        fibonacciNumbers.Add(fibonacciControl);
-            //    }
-            //}
-
-
             while (true)
             {
                 var listLength = fibonacciNumbers.Count;

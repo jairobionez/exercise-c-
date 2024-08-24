@@ -29,7 +29,10 @@ namespace Exercism
             //var sumMultiples = Euler1.Multiples(10)
 
             //https://www.hackerrank.com/contests/projecteuler/challenges/euler002/problem?isFullScreen=true
-            var fibonacciSum = Euler2.GetFibonacciSum(10);
+            //var fibonacciSum = Euler2.GetFibonacciSum(10);
+
+            //https://www.hackerrank.com/contests/projecteuler/challenges/euler004/problem?isFullScreen=true
+            var palindrome = Euler4.FindLargestPalindrome(800000);
         }
     }
 }
