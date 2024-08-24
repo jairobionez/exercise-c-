@@ -23,10 +23,13 @@ namespace Exercism
             //var primeDigits2 = Euler51.InputNumbers(5, 2, 7);
             //var primeDigits3 = Euler51.InputNumbers(7, 3, 7);
             //var primeDigits3 = Euler51.InputNumbers(4, 3, 4);
-            var primeDigits3 = Euler51.InputNumbers(6, 2, 5);
+            //var primeDigits3 = Euler51.InputNumbers(6, 2, 5);
 
             //https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem?isFullScreen=true
-            //var sumMultiples = Euler1.Multiples(10);
+            //var sumMultiples = Euler1.Multiples(10)
+
+            //https://www.hackerrank.com/contests/projecteuler/challenges/euler002/problem?isFullScreen=true
+            var fibonacciSum = Euler2.GetFibonacciSum(10);
         }
     }
 }
