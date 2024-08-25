@@ -1,4 +1,5 @@
-﻿using Exercism.Console;
+﻿using BenchmarkDotNet.Running;
+using Exercism.Console;
 using Exercism.Console.CryptoSquare;
 using Exercism.Console.Euler;
 using Exercism.Console.Lasagna;
@@ -32,7 +33,11 @@ namespace Exercism
             //var fibonacciSum = Euler2.GetFibonacciSum(10);
 
             //https://www.hackerrank.com/contests/projecteuler/challenges/euler004/problem?isFullScreen=true
-            var palindrome = Euler4.FindLargestPalindrome(800000);
+            //var palindrome = Euler4.FindLargestPalindrome(800000);
+
+            //https://www.hackerrank.com/contests/projecteuler/challenges/euler003/problem?isFullScreen=true
+            //var largestPrime = BenchmarkRunner.Run<Euler3Test>();
+            var largestPrime = Euler3.LargestPrime(123456789102);
         }
     }
 }
